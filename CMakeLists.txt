@@ -4,13 +4,27 @@ project(aesd-assignments)
 # At minimum it should include the files in the test/assignmentX directory
 # Students can also add paths to their own test files using a ../ prefix to
 # reference this working directory
+<<<<<<< HEAD
 set(AUTOTEST_SOURCES
     test/assignment1/Test_hello.c
     test/assignment1/Test_assignment_validate.c
     ../student-test/assignment1/Test_validate_username.c
+=======
+
+set(CMAKE_C_FLAGS "-pthread")
+
+set(AUTOTEST_SOURCES
+    test/assignment1/Test_hello.c
+    test/assignment1/Test_assignment_validate.c
+    test/assignment4/Test_threading.c
+>>>>>>> buildroot-assignments-base/master
 )
 # A list of all files containing test code that is used for assignment validation
 set(TESTED_SOURCE
     ../examples/autotest-validate/autotest-validate.c
+<<<<<<< HEAD
+=======
+    ../examples/threading/threading.c
+>>>>>>> buildroot-assignments-base/master
 )
 add_subdirectory(assignment-autotest)
